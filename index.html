@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="document">
+        <form id="staffForm" class="flexRow form">
+            <input type="text" id="staffName" maxlength="255" placeholder="Nhập tên nhân viên..." required>
+            <input type="number" id="staffAge" min="18" max="65" placeholder="Nhập tuổi của nhân viên..." required>
+            <div class="flexColumn formGenderContainer">
+                <div class="flexRow formGenderInput">
+                    <input type="radio" name="staffGender" id="staffGender" value="male">
+                    <label for="staffGenderMale">Nam</label>
+                </div>
+                <div class="flexRow formGenderInput">
+                    <input type="radio" name="staffGender" id="staffGender" value="female">
+                    <label for="staffGenderFemale">Nữ</label>
+                </div>
+            </div>
+            <select id="staffPosition" required>
+                <option value="accountant">Kế toán</option>
+                <option value="programmer">Lập trình viên</option>
+                <option value="manager">Quản lý</option>
+            </select>
+            <input type="text" id="staffNote" placeholder="Ghi chú dành cho nhân viên..." maxlength="300">
+            <button type="submit" id="staffFormButton">Thêm</button>
+        </form>
+
+
+        <table id="staffTable" class="staffTable">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã NV</th>
+                    <th>Họ tên</th>
+                    <th>Tuổi</th>
+                    <th>Giới tính</th>
+                    <th>Vị trí</th>
+                    <th>Ghi chú</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="staffTableBody">
+            </tbody>
+        </table>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
